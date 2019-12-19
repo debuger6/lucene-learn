@@ -1,0 +1,141 @@
+cfs entry for: _1.fld
+doc 0
+  field 0
+    name content
+    type string
+    value The TF/IDF algorithm which used to be the default in Elasticsearch and Lucene. See Lucene鈥檚 Practical Scoring Function for more information.
+END
+checksum 00000000003032587346
+cfs entry for: _1.inf
+number of fields 1
+  name content
+  number 0
+  index options DOCS_AND_FREQS_AND_POSITIONS
+  term vectors false
+  payloads false
+  norms true
+  doc values NONE
+  doc values gen -1
+  attributes 0
+  data dimensional count 0
+  index dimensional count 0
+  dimensional num bytes 0
+  soft-deletes false
+checksum 00000000001520508211
+cfs entry for: _1.len
+field content
+  type NUMERIC
+  minvalue 24
+  pattern 0
+0
+T
+END
+checksum 00000000002112367533
+cfs entry for: _1.pst
+field content
+  term algorithm
+    doc 0
+      freq 1
+      pos 3
+  term and
+    doc 0
+      freq 1
+      pos 12
+  term be
+    doc 0
+      freq 1
+      pos 7
+  term default
+    doc 0
+      freq 1
+      pos 9
+  term elasticsearch
+    doc 0
+      freq 1
+      pos 11
+  term for
+    doc 0
+      freq 1
+      pos 21
+  term function
+    doc 0
+      freq 1
+      pos 20
+  term idf
+    doc 0
+      freq 1
+      pos 2
+  term in
+    doc 0
+      freq 1
+      pos 10
+  term information
+    doc 0
+      freq 1
+      pos 23
+  term lucene
+    doc 0
+      freq 2
+      pos 13
+      pos 15
+  term more
+    doc 0
+      freq 1
+      pos 22
+  term practical
+    doc 0
+      freq 1
+      pos 18
+  term scoring
+    doc 0
+      freq 1
+      pos 19
+  term see
+    doc 0
+      freq 1
+      pos 14
+  term tf
+    doc 0
+      freq 1
+      pos 1
+  term the
+    doc 0
+      freq 2
+      pos 0
+      pos 8
+  term to
+    doc 0
+      freq 1
+      pos 6
+  term used
+    doc 0
+      freq 1
+      pos 5
+  term which
+    doc 0
+      freq 1
+      pos 4
+  term 檚
+    doc 0
+      freq 1
+      pos 17
+  term 鈥
+    doc 0
+      freq 1
+      pos 16
+END
+checksum 00000000003678186971
+table of contents, size: 4
+  filename: _1.fld
+    start: 22
+    end: 260
+  filename: _1.inf
+    start: 282
+    end: 608
+  filename: _1.len
+    start: 630
+    end: 723
+  filename: _1.pst
+    start: 745
+    end: 1889
+table of contents begins at offset: 0000000000000001889

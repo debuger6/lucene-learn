@@ -1,0 +1,79 @@
+cfs entry for: _0.fld
+doc 0
+  field 0
+    name fieldname
+    type string
+    value This is the text to be indexed.
+END
+checksum 00000000003048758774
+cfs entry for: _0.inf
+number of fields 1
+  name fieldname
+  number 0
+  index options DOCS_AND_FREQS_AND_POSITIONS
+  term vectors false
+  payloads false
+  norms true
+  doc values NONE
+  doc values gen -1
+  attributes 0
+  data dimensional count 0
+  index dimensional count 0
+  dimensional num bytes 0
+  soft-deletes false
+checksum 00000000002384504217
+cfs entry for: _0.len
+field fieldname
+  type NUMERIC
+  minvalue 7
+  pattern 0
+0
+T
+END
+checksum 00000000003720144674
+cfs entry for: _0.pst
+field fieldname
+  term be
+    doc 0
+      freq 1
+      pos 5
+  term indexed
+    doc 0
+      freq 1
+      pos 6
+  term is
+    doc 0
+      freq 1
+      pos 1
+  term text
+    doc 0
+      freq 1
+      pos 3
+  term the
+    doc 0
+      freq 1
+      pos 2
+  term this
+    doc 0
+      freq 1
+      pos 0
+  term to
+    doc 0
+      freq 1
+      pos 4
+END
+checksum 00000000004195768449
+table of contents, size: 4
+  filename: _0.fld
+    start: 22
+    end: 149
+  filename: _0.inf
+    start: 171
+    end: 499
+  filename: _0.len
+    start: 521
+    end: 615
+  filename: _0.pst
+    start: 637
+    end: 1012
+table of contents begins at offset: 0000000000000001012

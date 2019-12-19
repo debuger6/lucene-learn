@@ -1,0 +1,32 @@
+    version 8.3.1
+    min version 8.3.1
+    number of documents 1
+    uses compound file true
+    diagnostics 10
+      key os
+      value Windows 10
+      key java.vendor
+      value Oracle Corporation
+      key java.version
+      value 13
+      key java.vm.version
+      value 13+33
+      key lucene.version
+      value 8.3.1
+      key os.arch
+      value amd64
+      key java.runtime.version
+      value 13+33
+      key source
+      value flush
+      key os.version
+      value 10.0
+      key timestamp
+      value 1576753020747
+    attributes 0
+    files 2
+      file _0.si
+      file _0.scf
+    id BL-ÃÈÏhTú’?9€
+    sort 0
+checksum 00000000000076085265
