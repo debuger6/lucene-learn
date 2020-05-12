@@ -1,24 +1,11 @@
 package example1;
 
-import org.apache.lucene.analysis.Analyzer;
-import org.apache.lucene.analysis.standard.StandardAnalyzer;
-import org.apache.lucene.codecs.simpletext.SimpleTextCodec;
-import org.apache.lucene.document.Document;
-import org.apache.lucene.document.Field;
-import org.apache.lucene.document.TextField;
-import org.apache.lucene.index.DirectoryReader;
-import org.apache.lucene.index.IndexWriter;
-import org.apache.lucene.index.IndexWriterConfig;
+import org.apache.lucene.document.*;
 import org.apache.lucene.queryparser.classic.ParseException;
-import org.apache.lucene.queryparser.classic.QueryParser;
-import org.apache.lucene.search.IndexSearcher;
-import org.apache.lucene.search.Query;
 import org.apache.lucene.search.ScoreDoc;
-import org.apache.lucene.store.Directory;
-import org.apache.lucene.store.SimpleFSDirectory;
+import org.apache.lucene.util.BytesRef;
 
 import java.io.IOException;
-import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -28,15 +15,30 @@ public class SimpleExample {
         List<Document> docs = new ArrayList<>();
         Document doc = new Document();
         String text = "The TF/IDF algorithm which used to be the default in Elasticsearch and Lucene. See Lucene’s Practical Scoring Function for more information.";
-        doc.add(new Field("content", text, TextField.TYPE_STORED));
+        doc.add(new Field("_source", text, TextField.TYPE_STORED));
+        doc.add(new DoubleDocValuesField("avg_value_docvalue", 1.99));
+        doc.add(new DoublePoint("avg_value_point", 2.89));
+        doc.add(new SortedSetDocValuesField("name", new BytesRef("Jack")));
+        doc.add(new StringField("_source2", text, Field.Store.YES));
+        docs.add(doc);
+
+        doc = new Document();
+        doc.add(new SortedSetDocValuesField("name", new BytesRef("Tom")));
+        docs.add(doc);
+
+        doc = new Document();
+        doc.add(new SortedSetDocValuesField("name", new BytesRef("Pony")));
         docs.add(doc);
 
         SimpleEngine engine = new SimpleEngine("./data");
         // 索引文档
         engine.index(docs);
 
+        engine.refresh();
+        //engine.flush();
+
         // 查询
-        ScoreDoc[] topDocs = engine.search("content", "elasticsearch", 10);
+        ScoreDoc[] topDocs = engine.search("_source", "Elasticsearch", 10);
         for (ScoreDoc scoreDoc: topDocs) {
             System.out.println(scoreDoc);
         }
